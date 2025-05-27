@@ -10,5 +10,5 @@ CREATE TABLE UserAccounts (
     IsActive BIT NOT NULL DEFAULT 1,
     CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
 
-	CONSTRAINT FK_UserAccounts_Userlink FOREIGN KEY (UserID) REFERENCES Userlink(UserlinkID),
+	CONSTRAINT FK_UserAccounts_Userlink FOREIGN KEY (UserID) REFERENCES Userlink(EntityID),
 );
