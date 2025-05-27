@@ -1,3 +1,7 @@
+USE UniversityPortalDB
+go
+DROP TABLE IF EXISTS Addresses;
+
 CREATE TABLE Addresses (
     AddressID INT PRIMARY KEY,
 	Country NVARCHAR(50) NOT NULL,       

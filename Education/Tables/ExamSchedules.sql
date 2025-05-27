@@ -11,4 +11,7 @@ CREATE TABLE ExamSchedules (
     Exam_StartTime TIME NOT NULL, 
 	Exam_EndTime TIME NOT NULL, 
 	ExamLocation NVARCHAR(100) NOT NULL,       
+
+	CONSTRAINT FK_ExamSchedules_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID),
+	CONSTRAINT FK_ExamSchedules_Major FOREIGN KEY (SemesterID) REFERENCES Semesters(SemesterID),
 );

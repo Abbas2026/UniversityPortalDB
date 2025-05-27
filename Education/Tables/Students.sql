@@ -17,4 +17,8 @@ CREATE TABLE Students (
 	DepartmentID INT,		--fk
 	MajorID INT,            --fk              
 	Status_Education NVARCHAR(20) CHECK (Status_Education IN ('Active', 'Expelled', 'Graduated', 'Dropped')),
+
+	CONSTRAINT FK_Students_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
+    CONSTRAINT FK_Students_Majors FOREIGN KEY (MajorID) REFERENCES Majors(MajorID),
+	CONSTRAINT FK_Students_Address FOREIGN KEY (AddressID) REFERENCES Addresses(AddressID)
 );
