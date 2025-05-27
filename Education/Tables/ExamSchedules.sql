@@ -1,0 +1,14 @@
+USE UniversityPortalDB;
+GO
+
+DROP TABLE IF EXISTS ExamSchedules;
+
+CREATE TABLE ExamSchedules (
+    ExamID INT PRIMARY KEY,
+    OfferingID INT NOT NULL,          --fk        
+    SemesterID INT NOT NULL,          --fk          
+    ExamDate DATE NOT NULL,                    
+    Exam_StartTime TIME NOT NULL, 
+	Exam_EndTime TIME NOT NULL, 
+	ExamLocation NVARCHAR(100) NOT NULL,       
+);
