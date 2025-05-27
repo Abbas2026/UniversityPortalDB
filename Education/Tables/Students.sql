@@ -3,7 +3,7 @@ go
 DROP TABLE IF EXISTS Students;
 
 CREATE TABLE Students (
-    StudentID INT IDENTITY(1,1) PRIMARY KEY,
+    StudentID INT IDENTITY(10000,1) PRIMARY KEY,
     NationalCode CHAR(10) UNIQUE NOT NULL,         
     FirstName NVARCHAR(50) NOT NULL,              
     LastName NVARCHAR(50) NOT NULL,                
@@ -12,7 +12,6 @@ CREATE TABLE Students (
     Gender CHAR(1) CHECK (Gender IN ('M', 'F')),  
     PhoneNumber VARCHAR(15),                       
     Email NVARCHAR(100),                      
-    AddressID INT,          --fk                
     EntryYear INT NOT NULL,     
 	DepartmentID INT,		--fk
 	MajorID INT,            --fk              
@@ -20,5 +19,4 @@ CREATE TABLE Students (
 
 	CONSTRAINT FK_Students_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
     CONSTRAINT FK_Students_Majors FOREIGN KEY (MajorID) REFERENCES Majors(MajorID),
-	CONSTRAINT FK_Students_Address FOREIGN KEY (AddressID) REFERENCES Addresses(AddressID)
 );

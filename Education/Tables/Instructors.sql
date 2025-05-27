@@ -18,6 +18,5 @@ CREATE TABLE Instructors (
     Rank NVARCHAR(50),                            
     Status NVARCHAR(20) CHECK (Status IN ('Active', 'Retired', 'Resigned')),  
 
-	CONSTRAINT FK_Instructors_Addresses FOREIGN KEY (AddressID) REFERENCES Addresses(AddressID),
 	CONSTRAINT FK_Instructors_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
 );

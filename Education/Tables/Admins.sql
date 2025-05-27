@@ -10,4 +10,6 @@ CREATE TABLE Admins (
     Role_user NVARCHAR(30) NOT NULL,         
     PhoneNumber VARCHAR(15),                        
     Email NVARCHAR(100),   
+	AddressID INT,          --fk                
+
 );
