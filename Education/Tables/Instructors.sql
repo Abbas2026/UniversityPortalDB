@@ -3,7 +3,7 @@ go
 DROP TABLE IF EXISTS Instructors;
 
 CREATE TABLE Instructors (
-    InstructorID INT PRIMARY KEY,
+    InstructorID INT IDENTITY(30000,1) PRIMARY KEY,
     NationalCode CHAR(10) UNIQUE NOT NULL,          
     FirstName NVARCHAR(50) NOT NULL,                
     LastName NVARCHAR(50) NOT NULL,               

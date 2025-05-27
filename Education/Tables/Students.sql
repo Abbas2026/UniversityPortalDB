@@ -3,7 +3,7 @@ go
 DROP TABLE IF EXISTS Students;
 
 CREATE TABLE Students (
-    StudentID INT PRIMARY KEY,
+    StudentID INT IDENTITY(1,1) PRIMARY KEY,
     NationalCode CHAR(10) UNIQUE NOT NULL,         
     FirstName NVARCHAR(50) NOT NULL,              
     LastName NVARCHAR(50) NOT NULL,                
