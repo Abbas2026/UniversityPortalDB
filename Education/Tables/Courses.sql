@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS Courses;
 
 CREATE TABLE Courses (
     CourseID INT IDENTITY(1,1) PRIMARY KEY,         
-    CourseName NVARCHAR(100) NOT NULL,                 
+    CourseName NVARCHAR(100) UNIQUE NOT NULL,                 
     CourseCode NVARCHAR(20) UNIQUE NOT NULL,            
     Credits INT NOT NULL CHECK (Credits BETWEEN 0 AND 6),
     CourseType NVARCHAR(20) NOT NULL,                  

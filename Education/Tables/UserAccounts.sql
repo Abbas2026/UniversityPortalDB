@@ -3,7 +3,7 @@ go
 DROP TABLE IF EXISTS UserAccounts;
 
 CREATE TABLE UserAccounts (
-    UserID INT PRIMARY KEY,     --fk
+    UserID NVARCHAR(10) PRIMARY KEY,     --fk
     Username NVARCHAR(50) NOT NULL UNIQUE,
     UserPassword NVARCHAR(255) NOT NULL, 
     Role_user NVARCHAR(30) NOT NULL,         

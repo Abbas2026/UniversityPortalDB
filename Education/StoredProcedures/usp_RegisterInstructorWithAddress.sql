@@ -1,8 +1,10 @@
 USE UniversityPortalDB;
 GO
+DROP PROCEDURE IF EXISTS usp_RegisterInstructorWithAddress;
+
 
 CREATE PROCEDURE usp_RegisterInstructorWithAddress
-    @NationalCode CHAR(10),
+    @NationalCode NVARCHAR(10),
     @FirstName NVARCHAR(50),
     @LastName NVARCHAR(50),
     @FatherName NVARCHAR(50) = NULL,

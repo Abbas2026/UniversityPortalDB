@@ -9,3 +9,4 @@ CREATE TABLE Departments (
     OfficePhone VARCHAR(15),                       
     Email NVARCHAR(100)                                                         
 );
+

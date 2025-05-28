@@ -1,5 +1,7 @@
 USE UniversityPortalDB
 GO
+DROP PROCEDURE IF EXISTS usp_RegisterStudentWithAddress;
+
 
 CREATE PROCEDURE usp_RegisterStudentWithAddress
     @NationalCode NVARCHAR(10),

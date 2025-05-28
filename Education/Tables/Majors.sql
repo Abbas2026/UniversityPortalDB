@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS Majors;
 
 CREATE TABLE Majors (
     MajorID INT IDENTITY(1,1) PRIMARY KEY,         
-    MajorName NVARCHAR(100) UNIQUE NOT NULL,               
+    MajorName NVARCHAR(100) NOT NULL,               
     MajorCode NVARCHAR(10) UNIQUE NOT NULL,          
     Degree NVARCHAR(20) NOT NULL,              
     DepartmentID INT NOT NULL,       --fk          

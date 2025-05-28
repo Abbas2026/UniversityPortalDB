@@ -1,0 +1,35 @@
+USE UniversityPortalDB
+GO
+
+INSERT INTO Majors (MajorName, MajorCode, Degree, DepartmentID)
+VALUES 
+(N'Computer Engineering', N'CE01', N'Bachelor', 1),
+(N'Software Engineering', N'CE02', N'Bachelor', 1),
+(N'Artificial Intelligence', N'CE03', N'Master', 1),
+(N'Cybersecurity', N'CE04', N'Master', 1),
+(N'Electrical Engineering - Power', N'EE01', N'Bachelor', 2),
+(N'Electrical Engineering - Control', N'EE02', N'Master', 2),
+(N'Electrical Engineering - Electronics', N'EE03', N'Bachelor', 2),
+(N'Mechanical Engineering - Solid Design', N'ME01', N'Bachelor', 3),
+(N'Mechanical Engineering - Fluids', N'ME02', N'Master', 3),
+(N'Civil Engineering - Structures', N'CIE01', N'Bachelor', 4),
+(N'Civil Engineering - Earthquake', N'CIE02', N'Master', 4),
+(N'Chemical Engineering - Process Design', N'CHE01', N'Bachelor', 5),
+(N'Mathematics - Pure', N'MATH01', N'Bachelor', 6),
+(N'Mathematics - Applied', N'MATH02', N'Master', 6),
+(N'Physics - Atomic', N'PHYS01', N'Bachelor', 7),
+(N'Physics - Solid State', N'PHYS02', N'Master', 7),
+(N'Chemistry - Organic', N'CHEM01', N'Bachelor', 8),
+(N'Chemistry - Analytical', N'CHEM02', N'Master', 8),
+(N'Biology - Molecular', N'BIO01', N'Bachelor', 9),
+(N'Biology - Genetics', N'BIO02', N'Master', 9),
+(N'Persian Literature', N'PL01', N'Bachelor', 10),
+(N'Law - General', N'LAW01', N'Bachelor', 11),
+(N'Law - International', N'LAW02', N'Master', 11),
+(N'Political Science - Public Policy', N'POL01', N'Bachelor', 12),
+(N'Management - Industrial', N'MGT01', N'Bachelor', 13),
+(N'Management - Financial', N'MGT02', N'Master', 13),
+(N'Economics - Theoretical', N'ECO01', N'Bachelor', 14),
+(N'Economics - Development', N'ECO02', N'Master', 14),
+(N'Psychology - Clinical', N'PSY01', N'Bachelor', 15),
+(N'Psychology - Educational', N'PSY02', N'Master', 15);
