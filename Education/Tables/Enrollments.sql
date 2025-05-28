@@ -11,5 +11,5 @@ CREATE TABLE Enrollments (
     Status_enrollment NVARCHAR(20) NOT NULL DEFAULT N'À» ù‰«„ù‘œÂ', 
 
 	CONSTRAINT FK_Enrollments_Students FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-	CONSTRAINT FK_Enrollments_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID),
+	CONSTRAINT FK_Enrollments_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID)
 );

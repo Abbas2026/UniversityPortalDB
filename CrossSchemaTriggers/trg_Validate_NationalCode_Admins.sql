@@ -1,3 +1,5 @@
+USE UniversityPortalDB;
+GO
 CREATE OR ALTER TRIGGER trg_Validate_NationalCode_Admins
 ON Admins
 INSTEAD OF INSERT

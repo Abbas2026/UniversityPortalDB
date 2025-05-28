@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS Instructors;
 
 CREATE TABLE Instructors (
     InstructorID INT IDENTITY(30000,1) PRIMARY KEY,
-    NationalCode CHAR(10) UNIQUE NOT NULL,          
+    NationalCode NVARCHAR(10) UNIQUE NOT NULL,          
     FirstName NVARCHAR(50) NOT NULL,                
     LastName NVARCHAR(50) NOT NULL,               
     FatherName NVARCHAR(50),                        
@@ -12,11 +12,10 @@ CREATE TABLE Instructors (
     Gender CHAR(1) CHECK (Gender IN ('M', 'F')),
     PhoneNumber VARCHAR(15),                        
     Email NVARCHAR(100),                            
-    AddressID INT,                  --fk                 
     HireDate DATE NOT NULL,                         
     DepartmentID INT NOT NULL,		--fk                     
     Rank NVARCHAR(50),                            
     Status NVARCHAR(20) CHECK (Status IN ('Active', 'Retired', 'Resigned')),  
 
-	CONSTRAINT FK_Instructors_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
+	CONSTRAINT FK_Instructors_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );

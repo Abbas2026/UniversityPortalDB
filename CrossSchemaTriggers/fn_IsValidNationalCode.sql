@@ -36,4 +36,3 @@ BEGIN
     RETURN @IsValid;
 END;
 GO
-

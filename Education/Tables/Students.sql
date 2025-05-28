@@ -4,7 +4,7 @@ DROP TABLE IF EXISTS Students;
 
 CREATE TABLE Students (
     StudentID INT IDENTITY(10000,1) PRIMARY KEY,
-    NationalCode CHAR(10) UNIQUE NOT NULL,         
+    NationalCode NVARCHAR(10) UNIQUE NOT NULL,         
     FirstName NVARCHAR(50) NOT NULL,              
     LastName NVARCHAR(50) NOT NULL,                
     FatherName NVARCHAR(50),                    
@@ -18,5 +18,5 @@ CREATE TABLE Students (
 	Status_Education NVARCHAR(20) CHECK (Status_Education IN ('Active', 'Expelled', 'Graduated', 'Dropped')),
 
 	CONSTRAINT FK_Students_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
-    CONSTRAINT FK_Students_Majors FOREIGN KEY (MajorID) REFERENCES Majors(MajorID),
+    CONSTRAINT FK_Students_Majors FOREIGN KEY (MajorID) REFERENCES Majors(MajorID)
 );

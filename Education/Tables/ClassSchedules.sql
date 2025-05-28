@@ -10,5 +10,5 @@ CREATE TABLE ClassSchedules (
     EndTime TIME NOT NULL,       
     Location_class NVARCHAR(100) NOT NULL, 
 
-	CONSTRAINT FK_ClassSchedules_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID),
+	CONSTRAINT FK_ClassSchedules_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID)
 );

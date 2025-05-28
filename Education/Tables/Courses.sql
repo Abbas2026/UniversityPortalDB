@@ -3,7 +3,7 @@ go
 DROP TABLE IF EXISTS Courses;
 
 CREATE TABLE Courses (
-    CourseID INT PRIMARY KEY,         
+    CourseID INT IDENTITY(1,1) PRIMARY KEY,         
     CourseName NVARCHAR(100) NOT NULL,                 
     CourseCode NVARCHAR(20) UNIQUE NOT NULL,            
     Credits INT NOT NULL CHECK (Credits BETWEEN 0 AND 6),
@@ -13,5 +13,5 @@ CREATE TABLE Courses (
     DepartmentID INT NOT NULL,              --fk    
 	
 	CONSTRAINT FK_Courses_Major FOREIGN KEY (MajorID) REFERENCES Majors(MajorID),
-	CONSTRAINT FK_Courses_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID),
+	CONSTRAINT FK_Courses_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
 );
