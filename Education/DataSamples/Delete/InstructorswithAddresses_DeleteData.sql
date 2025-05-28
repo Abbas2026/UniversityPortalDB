@@ -33,3 +33,11 @@ from addresses;
 
 select *
 from admins;
+
+
+select *
+from Students;
+
+
+select *
+from Majors;

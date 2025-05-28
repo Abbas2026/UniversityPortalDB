@@ -4,7 +4,7 @@ GO
 DROP TABLE IF EXISTS Addresses;
 
 CREATE TABLE Addresses (
-    AddressID INT PRIMARY KEY  IDENTITY(1,1),
+    AddressID INT PRIMARY KEY IDENTITY(1,1),
     EntityType NVARCHAR(30) NOT NULL, 
     EntityID NVARCHAR(10) UNIQUE NOT NULL,            
     Country NVARCHAR(50) NOT NULL,       
