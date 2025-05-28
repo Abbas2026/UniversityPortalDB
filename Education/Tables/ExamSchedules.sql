@@ -4,7 +4,7 @@ GO
 DROP TABLE IF EXISTS ExamSchedules;
 
 CREATE TABLE ExamSchedules (
-    ExamID IDENTITY(1,1) INT PRIMARY KEY,
+    ExamID INT IDENTITY(1,1) PRIMARY KEY,
     OfferingID INT NOT NULL,          --fk        
     SemesterID INT NOT NULL,          --fk          
     ExamDate DATE NOT NULL,                    
