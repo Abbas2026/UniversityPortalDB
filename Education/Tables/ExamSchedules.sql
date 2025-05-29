@@ -6,12 +6,10 @@ DROP TABLE IF EXISTS ExamSchedules;
 CREATE TABLE ExamSchedules (
     ExamID INT IDENTITY(1,1) PRIMARY KEY,
     OfferingID INT NOT NULL,          --fk        
-    SemesterID INT NOT NULL,          --fk          
     ExamDate DATE NOT NULL,                    
     Exam_StartTime TIME NOT NULL, 
 	Exam_EndTime TIME NOT NULL, 
 	ExamLocation NVARCHAR(100) NOT NULL,       
 
 	CONSTRAINT FK_ExamSchedules_CourseOfferings FOREIGN KEY (OfferingID) REFERENCES CourseOfferings(OfferingID),
-	CONSTRAINT FK_ExamSchedules_Major FOREIGN KEY (SemesterID) REFERENCES Semesters(SemesterID)
 );

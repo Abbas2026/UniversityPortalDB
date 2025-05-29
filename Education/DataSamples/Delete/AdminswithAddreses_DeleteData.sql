@@ -12,6 +12,8 @@ BEGIN TRY
     WHERE EntityType = N'Admin';
 
     DELETE FROM Admins;
+	DBCC CHECKIDENT ('Admins', RESEED, 20000);
+
 
     COMMIT TRANSACTION;
 END TRY

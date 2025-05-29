@@ -14,6 +14,8 @@ BEGIN TRY
     INNER JOIN Instructors I ON A.EntityType = N'Instructor' AND A.EntityID = I.NationalCode;
 
     DELETE FROM Instructors
+	DBCC CHECKIDENT ('Instructors', RESEED, 30000);
+
 
     COMMIT TRANSACTION;
 END TRY
