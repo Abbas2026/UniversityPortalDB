@@ -18,3 +18,9 @@ from Students;
 
 select *
 from Majors;
+
+select *
+from courses;
+
+select *
+from useraccounts;

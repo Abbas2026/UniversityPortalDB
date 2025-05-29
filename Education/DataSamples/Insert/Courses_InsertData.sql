@@ -1,8 +1,5 @@
 USE UniversityPortalDB;
 GO
-DELETE FROM Courses;
-
-DBCC CHECKIDENT ('Courses', RESEED, 0);
 
 INSERT INTO Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorID, DepartmentID) VALUES
 -- —‘ Â 1: Computer Engineering (MajorID=1, DepartmentID=1)

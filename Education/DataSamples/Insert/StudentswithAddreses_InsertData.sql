@@ -6,7 +6,6 @@ BEGIN TRY
 
     DECLARE @OutputTable TABLE (StudentID INT);
 
-    -- Computer Engineering (MajorID = 1)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES 
@@ -20,7 +19,6 @@ BEGIN TRY
 
     DELETE FROM @OutputTable;
 
-    -- Software Engineering (MajorID = 2)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES 
@@ -34,7 +32,6 @@ BEGIN TRY
 
     DELETE FROM @OutputTable;
 
-    -- Artificial Intelligence (MajorID = 3)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES
@@ -48,7 +45,6 @@ BEGIN TRY
 
     DELETE FROM @OutputTable;
 
-    -- Cybersecurity (MajorID = 4)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES
@@ -62,7 +58,6 @@ BEGIN TRY
 
     DELETE FROM @OutputTable;
 
-    -- Electrical Engineering - Power (MajorID = 5)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES
@@ -76,7 +71,6 @@ BEGIN TRY
 
     DELETE FROM @OutputTable;
 
-	-- Electrical Engineering - Control (MajorID = 6)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -90,7 +84,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Electrical Engineering - Electronics (MajorID = 7)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -104,7 +97,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
-    -- Mechanical Engineering - Solid Design (MajorID = 8)
     INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
     OUTPUT inserted.StudentID INTO @OutputTable
     VALUES
@@ -119,7 +111,6 @@ DELETE FROM @OutputTable;
     DELETE FROM @OutputTable;
 
 	
--- Mechanical Engineering - Fluids (MajorID = 9)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -133,7 +124,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Civil Engineering - Structures (MajorID = 10)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -147,7 +137,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Civil Engineering - Earthquake (MajorID = 11)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -161,7 +150,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Chemical Engineering - Process Design (MajorID = 12)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -175,7 +163,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Mathematics - Pure (MajorID = 13)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -189,7 +176,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Mathematics - Applied (MajorID = 14)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -203,7 +189,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Physics - Atomic (MajorID = 15)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -217,7 +202,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Physics - Solid State (MajorID = 16)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -231,7 +215,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Chemistry - Organic (MajorID = 17)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -245,7 +228,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Chemistry - Analytical (MajorID = 18)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -259,7 +241,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Biology - Molecular (MajorID = 19)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -273,7 +254,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Biology - Genetics (MajorID = 20)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -287,7 +267,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Persian Literature (MajorID = 21)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -301,7 +280,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Law - General (MajorID = 22)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -315,7 +293,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Law - International (MajorID = 23)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -329,7 +306,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Political Science - Public Policy (MajorID = 24)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -343,7 +319,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Management - Industrial (MajorID = 25)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -357,7 +332,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Management - Financial (MajorID = 26)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -371,7 +345,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Computer Engineering - Software (MajorID = 27)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -385,7 +358,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Computer Engineering - Hardware (MajorID = 28)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -399,7 +371,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Computer Science (MajorID = 29)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -413,7 +384,6 @@ VALUES
 
 DELETE FROM @OutputTable;
 
--- Electrical Engineering - Power (MajorID = 30)
 INSERT INTO Students (NationalCode, FirstName, LastName, FatherName, BirthDate, Gender, PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education)
 OUTPUT inserted.StudentID INTO @OutputTable
 VALUES
@@ -426,8 +396,6 @@ VALUES
 (N'Student', N'8815494839', N'Iran', N'Tehran', N'Tehran', N'Enghelab', N'117th', N'66', N'0071234629', N'Dormitory');
 
 DELETE FROM @OutputTable;
-
-
 
     COMMIT TRANSACTION;
 END TRY
