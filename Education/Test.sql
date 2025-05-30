@@ -43,3 +43,26 @@ from ExamSchedules;
 
 select *
 from Enrollments;
+
+select *
+from StudentCourses;
+
+SELECT dbo.fn_GetStudentGPA(10003, 1) AS GPA;
+
+
+SELECT 
+    e.StudentID,
+    sc.StudentCoursID,
+    sc.Grade,
+    sc.Status_course,
+    co.SemesterID,
+    co.CourseID
+FROM 
+    StudentCourses sc
+JOIN 
+    Enrollments e ON sc.EnrollmentID = e.EnrollmentID
+JOIN 
+    CourseOfferings co ON e.OfferingID = co.OfferingID
+WHERE 
+    co.SemesterID = 1 AND e.StudentID =10003;
+
