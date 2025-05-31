@@ -47,7 +47,14 @@ from Enrollments;
 select *
 from StudentCourses;
 
+select *
+from StudentStatusChanges
+where StudentID=10003;
+
 SELECT dbo.fn_GetStudentGPA(10003, 1) AS GPA;
+
+SELECT dbo.fn_RemainingCredits(10003) AS RemainingUnits;
+
 
 
 SELECT 
