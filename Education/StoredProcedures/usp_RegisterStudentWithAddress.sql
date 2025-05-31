@@ -1,4 +1,4 @@
-USE UniversityPortalDB
+ï»¿USE UniversityPortalDB
 GO
 DROP PROCEDURE IF EXISTS usp_RegisterStudentWithAddress;
 GO
@@ -41,7 +41,6 @@ BEGIN
             @PhoneNumber, @Email, @EntryYear, @DepartmentID, @MajorID, @Status_Education
         );
 
-        DECLARE @NewStudentID INT = SCOPE_IDENTITY();
 
         INSERT INTO Addresses (
             EntityType, EntityID, Country, Province, City, Street, Alley,
@@ -62,7 +61,7 @@ BEGIN
             'INSERT',
             'Students',
             @NationalCode,
-            N'ÏÇäÔÌæ ÈÇ äÇã ' + @FirstName + N' ' + @LastName + N' ËÈÊ ÔÏ.'
+            N'Ø¯Ø§Ù†Ø´Ø¬Ùˆ Ø¨Ø§ Ù†Ø§Ù… ' + @FirstName + N' ' + @LastName + N' Ø«Ø¨Øª Ø´Ø¯.'
         );
 
         COMMIT;

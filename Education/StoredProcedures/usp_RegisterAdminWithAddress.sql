@@ -39,7 +39,7 @@ BEGIN
             PlaqueNumber, PostalCode, ExtraDescription
         )
         VALUES (
-            'Admin', @NewAdminID, @Country, @Province, @City, @Street, @Alley,
+            'Admin', @NationalCode, @Country, @Province, @City, @Street, @Alley,
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
@@ -52,7 +52,7 @@ BEGIN
         VALUES (
             'INSERT',
             'Admins',
-            @NewAdminID,
+            @NationalCode,
             N'ادمین با نام ' + @FirstName + N' ' + @LastName + N' ثبت شد.'
         );
 

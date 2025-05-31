@@ -162,3 +162,4 @@ WHERE
 
 
 	EXEC usp_GetSuggestedCourses_PriorityPast @StudentID=10065, @CurrentSemesterOrder=6;
+
