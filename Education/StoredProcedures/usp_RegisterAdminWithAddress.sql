@@ -1,7 +1,7 @@
-USE UniversityPortalDB;
+﻿USE UniversityPortalDB;
 GO
 DROP PROCEDURE IF EXISTS usp_RegisterAdminWithAddress;
-
+GO
 
 CREATE PROCEDURE usp_RegisterAdminWithAddress
     @NationalCode NVARCHAR(10),
@@ -43,6 +43,19 @@ BEGIN
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
+        INSERT INTO EventLogs (
+            EventType,
+            TableName,
+            RecordID,
+            EventDescription
+        )
+        VALUES (
+            'INSERT',
+            'Admins',
+            @NewAdminID,
+            N'ادمین با نام ' + @FirstName + N' ' + @LastName + N' ثبت شد.'
+        );
+
         COMMIT;
     END TRY
     BEGIN CATCH
@@ -50,3 +63,4 @@ BEGIN
         THROW;
     END CATCH
 END;
+GO

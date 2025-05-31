@@ -1,4 +1,4 @@
-USE UniversityPortalDB;
+﻿USE UniversityPortalDB;
 GO
 
 select *
@@ -50,6 +50,8 @@ select *
 from StudentCourses
 where EnrollmentID=594;
 
+select *
+from EventLogs;
 
 
 select *
@@ -86,5 +88,73 @@ WHERE
 
 
 	EXEC usp_UpdateStudentGrade 
-    @StudentCourseID = 500, 
+    @StudentCourseID = 594, 
     @Grade = 14.75;
+
+
+	EXEC usp_GetStudentTranscript 
+    @StudentID = 10001, 
+    @SemesterID = 2;
+
+
+	EXEC usp_RegisterStudentWithAddress
+    @NationalCode = '0012345678',
+    @FirstName = N'علی',
+    @LastName = N'رضایی',
+    @FatherName = N'حسن',
+    @BirthDate = '2001-03-21',
+    @Gender = 'M',
+    @PhoneNumber = '09123456789',
+    @Email = 'ali.rezaei@example.com',
+    @EntryYear = 1402,
+    @DepartmentID = 1,
+    @MajorID = 2,
+    @Status_Education = N'عادی',
+    @Country = N'ایران',
+    @Province = N'تهران',
+    @City = N'تهران',
+    @Street = N'ولیعصر',
+    @Alley = N'گلها',
+    @PlaqueNumber = '12',
+    @PostalCode = '1234567890',
+    @ExtraDescription = N'بدون توضیح';
+
+
+	EXEC usp_RegisterInstructorWithAddress
+    @NationalCode = '0098765432',
+    @FirstName = N'مریم',
+    @LastName = N'کاظمی',
+    @FatherName = N'حسین',
+    @BirthDate = '1980-06-15',
+    @Gender = 'F',
+    @PhoneNumber = '09121234567',
+    @Email = 'maryam.kazemi@example.com',
+    @HireDate = '2010-09-01',
+    @DepartmentID = 2,
+    @Rank = N'دانشیار',
+    @Status = N'فعال',
+    @Country = N'ایران',
+    @Province = N'اصفهان',
+    @City = N'اصفهان',
+    @Street = N'عباس آباد',
+    @Alley = N'نور',
+    @PlaqueNumber = '45',
+    @PostalCode = '8765432101',
+    @ExtraDescription = N'مدرس درس‌های پایه';
+
+
+	EXEC usp_RegisterAdminWithAddress
+    @NationalCode = '0078912345',
+    @FirstName = N'حسین',
+    @LastName = N'قاسمی',
+    @Role_user = N'مدیر سامانه',
+    @PhoneNumber = '09121111111',
+    @Email = 'hossein.ghasemi@example.com',
+    @Country = N'ایران',
+    @Province = N'فارس',
+    @City = N'شیراز',
+    @Street = N'نمازی',
+    @Alley = N'گلسار',
+    @PlaqueNumber = '8',
+    @PostalCode = '7654321098',
+    @ExtraDescription = N'مدیریت کل سامانه دانشگاه';

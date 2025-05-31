@@ -1,7 +1,7 @@
 USE UniversityPortalDB
 GO
 DROP PROCEDURE IF EXISTS usp_RegisterStudentWithAddress;
-
+GO
 
 CREATE PROCEDURE usp_RegisterStudentWithAddress
     @NationalCode NVARCHAR(10),
@@ -28,6 +28,7 @@ CREATE PROCEDURE usp_RegisterStudentWithAddress
 AS
 BEGIN
     SET NOCOUNT ON;
+
     BEGIN TRY
         BEGIN TRANSACTION;
 
@@ -49,6 +50,19 @@ BEGIN
         VALUES (
             'Student', @NewStudentID, @Country, @Province, @City, @Street, @Alley,
             @PlaqueNumber, @PostalCode, @ExtraDescription
+        );
+
+        INSERT INTO EventLogs (
+            EventType,
+            TableName,
+            RecordID,
+            EventDescription
+        )
+        VALUES (
+            'INSERT',
+            'Students',
+            @NewStudentID,
+            N'œ«‰‘ÃÊ »« ‰«„ ' + @FirstName + N' ' + @LastName + N' À»  ‘œ.'
         );
 
         COMMIT;

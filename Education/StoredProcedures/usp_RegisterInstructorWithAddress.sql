@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 DROP PROCEDURE IF EXISTS usp_RegisterInstructorWithAddress;
-
+GO
 
 CREATE PROCEDURE usp_RegisterInstructorWithAddress
     @NationalCode NVARCHAR(10),
@@ -50,6 +50,19 @@ BEGIN
         VALUES (
             'Instructor', @NewInstructorID, @Country, @Province, @City, @Street, @Alley,
             @PlaqueNumber, @PostalCode, @ExtraDescription
+        );
+
+        INSERT INTO EventLogs (
+            EventType,
+            TableName,
+            RecordID,
+            EventDescription
+        )
+        VALUES (
+            'INSERT',
+            'Instructors',
+            @NewInstructorID,
+            N'«” «œ »« ‰«„ ' + @FirstName + N' ' + @LastName + N' À»  ‘œ.'
         );
 
         COMMIT TRANSACTION;

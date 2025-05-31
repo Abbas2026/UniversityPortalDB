@@ -1,4 +1,6 @@
-USE UniversityPortalDB;
+﻿USE UniversityPortalDB;
+GO
+DROP PROCEDURE IF EXISTS usp_GetStudentTranscript;
 GO
 
 CREATE PROCEDURE usp_GetStudentTranscript
@@ -6,6 +8,8 @@ CREATE PROCEDURE usp_GetStudentTranscript
     @SemesterID INT
 AS
 BEGIN
+    SET NOCOUNT ON;
+
     SELECT 
         c.CourseName,
         c.Credits,
@@ -16,4 +20,18 @@ BEGIN
     JOIN CourseOfferings co ON e.OfferingID = co.OfferingID
     JOIN Courses c ON co.CourseID = c.CourseID
     WHERE e.StudentID = @StudentID AND co.SemesterID = @SemesterID;
+
+    INSERT INTO EventLogs (
+        EventType,
+        TableName,
+        RecordID,
+        EventDescription
+    )
+    VALUES (
+        N'SELECT',
+        N'StudentCourses',
+        @StudentID,
+        N'درخواست کارنامه برای ترم شماره ' + CAST(@SemesterID AS NVARCHAR(10))
+    );
 END;
+GO
