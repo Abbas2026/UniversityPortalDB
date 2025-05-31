@@ -1,4 +1,4 @@
-USE UniversityPortalDB;
+﻿USE UniversityPortalDB;
 GO
 
 INSERT INTO Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorID, DepartmentID) VALUES
@@ -181,5 +181,55 @@ INSERT INTO Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorI
 (N'Curriculum Design', 'ENG202', 3, N'Theory', N'Master', 30, 15),
 (N'Teaching Practicum', 'ENG203', 2, N'Practical', N'Master', 30, 15),
 (N'Assessment in Language Teaching', 'ENG204', 3, N'Theory', N'Master', 30, 15),
-(N'Second Language Acquisition', 'ENG205', 3, N'Theory', N'Master', 30, 15);
-GO
+(N'Second Language Acquisition', 'ENG205', 3, N'Theory', N'Master', 30, 15),
+
+
+(N'ریاضی عمومی 1', 'CE106', 3, N'Theory', N'Bachelor', 1, 1),
+(N'فیزیک 1', 'CE107', 3, N'Theory', N'Bachelor', 1, 1),
+(N'مبانی برنامه سازی', 'CE108', 3, N'Theory', N'Bachelor', 1, 1),
+(N'کارگاه کامپیوتر', 'CE109', 3, N'Practical', N'Bachelor', 1, 1),
+(N'آشنایی بامهندسی کامپیوتر', 'CE110', 3, N'Theory', N'Bachelor', 1, 1),
+(N'زبان عمومی', 'CE111', 3, N'Theory', N'Bachelor', 1, 1),
+(N'تربیت بدنی1', 'CE112', 3, N'Practical', N'Bachelor', 1, 1),
+(N'ریاضی عمومی 2', 'CE113', 3, N'Theory', N'Bachelor', 1, 1),
+(N'فیزیک 2', 'CE114', 3, N'Theory', N'Bachelor', 1, 1),
+(N'برنامه سازی پیشرفته', 'CE115', 3, N'Theory', N'Bachelor', 1, 1),
+(N'ساختمان گسسته', 'CE116', 3, N'Theory', N'Bachelor', 1, 1),
+(N'معادلات دیفرانسیل', 'CE117', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز فیزیک الکتریسیته', 'CE118', 3, N'Practical', N'Bachelor', 1, 1),
+(N'آمار و احتمال مهندسی', 'CE119', 3, N'Theory', N'Bachelor', 1, 1),
+(N'ریاضی مهندسی', 'CE120', 3, N'Theory', N'Bachelor', 1, 1),
+(N'مدارهای الکتریکی', 'CE121', 3, N'Theory', N'Bachelor', 1, 1),
+(N'ساختمان داده', 'CE122', 3, N'Theory', N'Bachelor', 1, 1),
+(N'طراحی دیحیتال1', 'CE123', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز طراحی دیحیتال1', 'CE124', 3, N'Practical', N'Bachelor', 1, 1),
+(N'معماری و سازمان کامپیوتر', 'CE125', 3, N'Theory', N'Bachelor', 1, 1),
+(N'شبکه های کامپیوتری', 'CE126', 3, N'Theory', N'Bachelor', 1, 1),
+(N'طراحی الگوریتم ها', 'CE127', 3, N'Theory', N'Bachelor', 1, 1),
+(N'پایگاه داده ها1', 'CE128', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز شبکه های کامپیوتری', 'CE129', 3, N'Practical', N'Bachelor', 1, 1),
+(N'زبان تخصصی کامپیوتر', 'CE130', 3, N'Theory', N'Bachelor', 1, 1),
+(N'تربیت بدنی2', 'CE131', 3, N'Practical', N'Bachelor', 1, 1),
+(N'ریز پردازنده', 'CE132', 3, N'Theory', N'Bachelor', 1, 1),
+(N'سیستم عامل', 'CE133', 3, N'Theory', N'Bachelor', 1, 1),
+(N'سیگنال ها و سیستم ها', 'CE134', 3, N'Theory', N'Bachelor', 1, 1),
+(N'هوش مصنوعی', 'CE135', 3, N'Theory', N'Bachelor', 1, 1),
+(N'نظریه زبان ها و ماشین ها', 'CE136', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز سیستم عامل', 'CE137', 3, N'Practical', N'Bachelor', 1, 1),
+(N'آز ریزپردازنده', 'CE138', 3, N'Practical', N'Bachelor', 1, 1),
+(N'ارائه مطالب علمی و فنی', 'CE139', 3, N'Theory', N'Bachelor', 1, 1),
+(N'شبکه های کامپیوتری 2', 'CE140', 3, N'Theory', N'Bachelor', 1, 1),
+(N'محاسبات ابری', 'CE141', 3, N'Theory', N'Bachelor', 1, 1),
+(N'مهندسی نرم افزار1', 'CE142', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز مهندسی نرم', 'CE143', 3, N'Practical', N'Bachelor', 1, 1),
+(N'کامپایلر', 'CE144', 3, N'Theory', N'Bachelor', 1, 1),
+(N'آز پایگاه داده', 'CE145', 3, N'Theory', N'Bachelor', 1, 1),
+(N'پروژه کارشناسی', 'CE146', 3, N'Practical', N'Bachelor', 1, 1),
+(N'مهندسی نرم افزار2', 'CE147', 3, N'Theory', N'Bachelor', 1, 1),
+(N'مبانی داده کاوی', 'CE148', 3, N'Theory', N'Bachelor', 1, 1),
+(N'پایگاه داده ها2', 'CE149', 3, N'Theory', N'Bachelor', 1, 1),
+(N'گراف کاوی', 'CE150', 3, N'Theory', N'Bachelor', 1, 1),
+(N'مبانی هوش محاسباتی', 'CE151', 3, N'Theory', N'Bachelor', 1, 1);
+
+
+

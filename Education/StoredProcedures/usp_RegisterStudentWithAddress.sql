@@ -48,7 +48,7 @@ BEGIN
             PlaqueNumber, PostalCode, ExtraDescription
         )
         VALUES (
-            'Student', @NewStudentID, @Country, @Province, @City, @Street, @Alley,
+            'Student', @NationalCode, @Country, @Province, @City, @Street, @Alley,
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
@@ -61,7 +61,7 @@ BEGIN
         VALUES (
             'INSERT',
             'Students',
-            @NewStudentID,
+            @NationalCode,
             N'œ«‰‘ÃÊ »« ‰«„ ' + @FirstName + N' ' + @LastName + N' À»  ‘œ.'
         );
 

@@ -83,22 +83,22 @@ WHERE
 
 
 	EXEC usp_RegisterStudentInCourse 
-    @StudentID = 10001, 
-    @OfferingID = 175;
+    @StudentID = 10065, 
+    @OfferingID = 301;
 
 
 	EXEC usp_UpdateStudentGrade 
-    @StudentCourseID = 594, 
+    @StudentCourseID = 596, 
     @Grade = 14.75;
 
 
 	EXEC usp_GetStudentTranscript 
-    @StudentID = 10001, 
-    @SemesterID = 2;
+    @StudentID = 10065, 
+    @SemesterID = 6;
 
 
 	EXEC usp_RegisterStudentWithAddress
-    @NationalCode = '0012345678',
+    @NationalCode = '1145431933',
     @FirstName = N'علی',
     @LastName = N'رضایی',
     @FatherName = N'حسن',
@@ -106,10 +106,10 @@ WHERE
     @Gender = 'M',
     @PhoneNumber = '09123456789',
     @Email = 'ali.rezaei@example.com',
-    @EntryYear = 1402,
+    @EntryYear = 1403,
     @DepartmentID = 1,
-    @MajorID = 2,
-    @Status_Education = N'عادی',
+    @MajorID = 1,
+    @Status_Education = N'Active',
     @Country = N'ایران',
     @Province = N'تهران',
     @City = N'تهران',
@@ -158,3 +158,7 @@ WHERE
     @PlaqueNumber = '8',
     @PostalCode = '7654321098',
     @ExtraDescription = N'مدیریت کل سامانه دانشگاه';
+
+
+
+	EXEC usp_GetSuggestedCourses_PriorityPast @StudentID=10065, @CurrentSemesterOrder=6;

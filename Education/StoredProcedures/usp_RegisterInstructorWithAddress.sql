@@ -41,14 +41,13 @@ BEGIN
             @PhoneNumber, @Email, @HireDate, @DepartmentID, @Rank, @Status
         );
 
-        DECLARE @NewInstructorID INT = SCOPE_IDENTITY();
 
         INSERT INTO Addresses (
             EntityType, EntityID, Country, Province, City, Street, Alley,
             PlaqueNumber, PostalCode, ExtraDescription
         )
         VALUES (
-            'Instructor', @NewInstructorID, @Country, @Province, @City, @Street, @Alley,
+            'Instructor', @NationalCode, @Country, @Province, @City, @Street, @Alley,
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
@@ -61,7 +60,7 @@ BEGIN
         VALUES (
             'INSERT',
             'Instructors',
-            @NewInstructorID,
+            @NationalCode,
             N'«” «œ »« ‰«„ ' + @FirstName + N' ' + @LastName + N' À»  ‘œ.'
         );
 
