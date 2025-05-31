@@ -1,4 +1,6 @@
-﻿DROP TRIGGER IF EXISTS trg_CheckGPA_OnGradeUpdate;
+﻿USE UniversityPortalDB;
+GO
+DROP TRIGGER IF EXISTS trg_CheckGPA_OnGradeUpdate;
 GO
 
 CREATE TRIGGER trg_CheckGPA_OnGradeUpdate
@@ -20,7 +22,7 @@ BEGIN
     UPDATE ssc
     SET 
         GPA = GPA_Calc.GPA,
-        StatusType = CASE WHEN GPA_Calc.GPA < 12 THEN N'مشروط' ELSE N'عادی' END
+        StatusType = dbo.fn_GetSemesterStatus(GPA_Calc.GPA)
     FROM StudentStatusChanges ssc
     JOIN Affected a ON ssc.StudentID = a.StudentID AND ssc.SemesterID = a.SemesterID
     CROSS APPLY (
