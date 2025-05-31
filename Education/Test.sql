@@ -42,14 +42,19 @@ select *
 from ExamSchedules;
 
 select *
-from Enrollments;
+from Enrollments
+where StudentID=10001;
+
 
 select *
-from StudentCourses;
+from StudentCourses
+where EnrollmentID=594;
+
+
 
 select *
 from StudentStatusChanges
-where StudentID=10003;
+where StudentID=10001;
 
 SELECT dbo.fn_GetStudentGPA(10003, 1) AS GPA;
 
@@ -73,3 +78,13 @@ JOIN
 WHERE 
     co.SemesterID = 1 AND e.StudentID =10003;
 
+
+
+	EXEC usp_RegisterStudentInCourse 
+    @StudentID = 10001, 
+    @OfferingID = 175;
+
+
+	EXEC usp_UpdateStudentGrade 
+    @StudentCourseID = 500, 
+    @Grade = 14.75;
