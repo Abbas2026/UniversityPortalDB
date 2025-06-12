@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\DataSamples",
+    "\\DataSamples\\insert",
     "\\Tables"
   ],
-  "SelectedNode": "\\Tables\\CreateSchema.sql",
+  "SelectedNode": "\\Tables\\LogsLibraryTable.sql",
   "PreviewInSolutionExplorer": false
 }
