@@ -3,8 +3,10 @@
     "",
     "\\DataSamples",
     "\\DataSamples\\insert",
-    "\\Tables"
+    "\\StoredProcedures",
+    "\\Tables",
+    "\\Triggers"
   ],
-  "SelectedNode": "\\Tables\\LogsLibraryTable.sql",
+  "SelectedNode": "\\Triggers\\trg_IBorrowingActivityLog.sql",
   "PreviewInSolutionExplorer": false
 }
