@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Fines
+DROP TABLE IF EXISTS Library.Fines
 
 CREATE TABLE Library.Fines (
     FineID INT PRIMARY KEY IDENTITY(1,1),

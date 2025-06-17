@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Returns
+DROP TABLE IF EXISTS Library.Returns
 
 CREATE TABLE Library.Returns (
     ReturnID INT PRIMARY KEY IDENTITY(1,1),

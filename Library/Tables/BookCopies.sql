@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS BookCopies
+DROP TABLE IF EXISTS Library.BookCopies
 
 CREATE TABLE Library.BookCopies (
     CopyID INT PRIMARY KEY IDENTITY(1,1),

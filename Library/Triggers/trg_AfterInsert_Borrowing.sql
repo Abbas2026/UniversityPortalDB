@@ -1,5 +1,8 @@
 USE UniversityPortalDB
 GO
+
+--DROP TRIGGER Library.trg_AfterInsert_Borrowing
+
 CREATE TRIGGER trg_AfterInsert_Borrowing
 ON Library.Borrowing
 AFTER INSERT

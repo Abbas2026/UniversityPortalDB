@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Members
+DROP TABLE IF EXISTS Library.Members
 
 CREATE TABLE Library.Members (
     MemberID INT PRIMARY KEY IDENTITY(1,1),

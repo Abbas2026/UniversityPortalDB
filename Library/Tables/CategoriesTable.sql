@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Categories
+DROP TABLE IF EXISTS Library.Categories
 
 
 CREATE TABLE Library.Categories (

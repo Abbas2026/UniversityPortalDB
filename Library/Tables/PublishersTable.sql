@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Publishers
+DROP TABLE IF EXISTS Library.Publishers
 
 CREATE TABLE Library.Publishers (
     PublisherID INT PRIMARY KEY IDENTITY(1,1),

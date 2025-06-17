@@ -1,0 +1,13 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Library",
+    "\\Library\\Functions",
+    "\\Library\\Logs",
+    "\\Library\\StoredProcedures",
+    "\\Library\\Tables",
+    "\\Library\\Triggers"
+  ],
+  "SelectedNode": "\\Library\\Triggers\\trg_IBorrowingActivityLog.sql",
+  "PreviewInSolutionExplorer": false
+}

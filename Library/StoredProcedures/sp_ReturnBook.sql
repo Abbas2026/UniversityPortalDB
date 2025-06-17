@@ -1,13 +1,12 @@
 USE UniversityPortalDB
 GO
-CREATE PROCEDURE Library.sp_ReturnBook
+ALTER PROCEDURE Library.sp_ReturnBook
     @BorrowID INT,
     @ReturnDate DATE
 AS
 BEGIN
     SET NOCOUNT ON;
 
-    
     IF NOT EXISTS (SELECT 1 FROM Library.Borrowing WHERE BorrowID = @BorrowID)
     BEGIN
         PRINT 'Invalid BorrowID.';
@@ -30,6 +29,11 @@ BEGIN
         CASE WHEN @DaysLate > 0 THEN 1 ELSE 0 END,
         CASE WHEN @DaysLate > 0 THEN @DaysLate ELSE 0 END
     );
+
+    
+    UPDATE Library.Borrowing
+    SET IsReturnd = 1
+    WHERE BorrowID = @BorrowID;
 
     UPDATE Library.BookCopies
     SET IsAvailable = 1
