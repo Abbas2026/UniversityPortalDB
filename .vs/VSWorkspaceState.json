@@ -1,6 +1,8 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Education\\Tables",
+    "\\Education\\Triggers",
     "\\Library",
     "\\Library\\Functions",
     "\\Library\\Logs",
@@ -8,6 +10,6 @@
     "\\Library\\Tables",
     "\\Library\\Triggers"
   ],
-  "SelectedNode": "\\Library\\Triggers\\trg_IBorrowingActivityLog.sql",
+  "SelectedNode": "\\Library\\Functions\\Top5BorrowedCopies.sql",
   "PreviewInSolutionExplorer": false
 }
