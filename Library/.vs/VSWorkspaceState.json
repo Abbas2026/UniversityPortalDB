@@ -3,10 +3,12 @@
     "",
     "\\DataSamples",
     "\\DataSamples\\insert",
+    "\\Functions",
+    "\\Logs",
     "\\StoredProcedures",
     "\\Tables",
     "\\Triggers"
   ],
-  "SelectedNode": "\\Triggers\\trg_IBorrowingActivityLog.sql",
+  "SelectedNode": "\\Triggers\\trg_prevent_deactivate_active_member.sql",
   "PreviewInSolutionExplorer": false
 }
