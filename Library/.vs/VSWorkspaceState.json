@@ -6,9 +6,8 @@
     "\\Functions",
     "\\Logs",
     "\\StoredProcedures",
-    "\\Tables",
-    "\\Triggers"
+    "\\Tables"
   ],
-  "SelectedNode": "\\Triggers\\trg_prevent_deactivate_active_member.sql",
+  "SelectedNode": "\\Tables\\CategoriesTable.sql",
   "PreviewInSolutionExplorer": false
 }
