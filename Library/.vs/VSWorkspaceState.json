@@ -6,8 +6,8 @@
     "\\Functions",
     "\\Logs",
     "\\StoredProcedures",
-    "\\Tables"
+    "\\Triggers"
   ],
-  "SelectedNode": "\\Tables\\CategoriesTable.sql",
+  "SelectedNode": "\\StoredProcedures\\RecommendBooksForStudent.sql",
   "PreviewInSolutionExplorer": false
 }

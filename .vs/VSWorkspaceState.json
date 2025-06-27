@@ -1,15 +1,7 @@
 {
   "ExpandedNodes": [
-    "",
-    "\\Education\\Tables",
-    "\\Education\\Triggers",
-    "\\Library",
-    "\\Library\\Functions",
-    "\\Library\\Logs",
-    "\\Library\\StoredProcedures",
-    "\\Library\\Tables",
-    "\\Library\\Triggers"
+    ""
   ],
-  "SelectedNode": "\\Library\\Functions\\Top5BorrowedCopies.sql",
+  "SelectedNode": "\\BookRecommendationETL.sln",
   "PreviewInSolutionExplorer": false
 }
