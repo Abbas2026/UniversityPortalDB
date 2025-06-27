@@ -26,6 +26,3 @@ INSERT INTO Library.Books (Title, ISBN, PublisherID, CategoryID, PublishYear) VA
 ('Introduction to Computer Vision', '9783319326873', 23, 5, 2019),
 ('Advanced Computer Architecture', '9780128119051', 24, 4, 2022),
 ('Cloud Computing Concepts', '9780124046276', 25, 2, 2021);
-
-
-

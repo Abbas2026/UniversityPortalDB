@@ -2,7 +2,6 @@ USE UniversityPortalDB
 
 DROP TABLE IF EXISTS Library.Borrowing
 
-
 CREATE TABLE Library.Borrowing (
     BorrowID INT PRIMARY KEY IDENTITY(1,1),
     MemberID INT FOREIGN KEY REFERENCES Library.Members(MemberID),

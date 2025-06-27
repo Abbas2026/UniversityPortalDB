@@ -9,3 +9,5 @@ CREATE TABLE Library.Members (
     RegisterDate DATE DEFAULT GETDATE(),
     IsActive BIT DEFAULT 1
 );
+
+

@@ -9,3 +9,4 @@ CREATE TABLE Library.Returns (
     IsLate BIT,
     DaysLate INT
 );
+
