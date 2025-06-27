@@ -1,6 +1,8 @@
 USE UniversityPortalDB
 GO
-ALTER PROCEDURE Library.sp_ReturnBook
+DROP PROCEDURE IF EXISTS Library.sp_ReturnBook;
+GO
+CREATE OR ALTER PROCEDURE Library.sp_ReturnBook
     @BorrowID INT,
     @ReturnDate DATE
 AS

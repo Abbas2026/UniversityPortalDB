@@ -52,3 +52,8 @@ GRANT EXECUTE ON dbo.fn_GetSemesterStatus TO Student;
 GRANT EXECUTE ON dbo.fn_GetStudentGPA TO Student;
 GRANT EXECUTE ON dbo.fn_RemainingCredits TO Student;
 GO
+
+REVOKE SELECT, INSERT, UPDATE, DELETE ON dbo.Enrollments FROM Student;
+GO
+GRANT EXECUTE ON dbo.usp_RegisterStudentInCourse TO Student;
+GO

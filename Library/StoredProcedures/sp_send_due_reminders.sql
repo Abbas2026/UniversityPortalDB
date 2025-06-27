@@ -1,3 +1,5 @@
+DROP PROCEDURE IF EXISTS Library.proc_send_due_reminders;
+
 CREATE PROCEDURE Library.proc_send_due_reminders AS
 BEGIN
     SET NOCOUNT ON;
