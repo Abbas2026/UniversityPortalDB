@@ -1,7 +1,7 @@
 USE UniversityPortalDB
 GO
 
---DROP TRIGGER Library.trg_Borrow_Log_Delete
+DROP TRIGGER Library.trg_Borrow_Log_UpdateIsReturnd
 
 CREATE OR ALTER TRIGGER trg_Borrow_Log_UpdateIsReturnd
 ON Library.Borrowing

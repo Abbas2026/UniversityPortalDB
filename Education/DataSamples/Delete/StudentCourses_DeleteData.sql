@@ -1,5 +1,5 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM StudentCourses;
-DBCC CHECKIDENT ('StudentCourses', RESEED, 0);
+DELETE FROM Education.StudentCourses;
+DBCC CHECKIDENT ('Education.StudentCourses', RESEED, 0);

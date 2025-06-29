@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO ExamSchedules (OfferingID, ExamDate, Exam_StartTime, Exam_EndTime, ExamLocation) VALUES
+INSERT INTO Education.ExamSchedules (OfferingID, ExamDate, Exam_StartTime, Exam_EndTime, ExamLocation) VALUES
 (1, '2022-11-14', '13:30:00', '15:00:00', N'Room 117'),
 (2, '2022-11-11', '09:00:00', '11:30:00', N'Room 118'),
 (3, '2022-11-12', '09:00:00', '11:30:00', N'Room 114'),

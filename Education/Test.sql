@@ -2,7 +2,7 @@
 GO
 
 select *
-from instructors;
+from Education.instructors;
 
 select *
 from userlink;

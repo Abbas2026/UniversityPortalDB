@@ -1,5 +1,5 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM ExamSchedules;
-DBCC CHECKIDENT ('ExamSchedules', RESEED, 0);
+DELETE FROM Education.ExamSchedules;
+DBCC CHECKIDENT ('Education.ExamSchedules', RESEED, 0);

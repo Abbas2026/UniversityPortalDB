@@ -1,8 +1,8 @@
 USE UniversityPortalDB
 go
-DROP TABLE IF EXISTS StudentStatusChanges;
+DROP TABLE IF EXISTS Education.StudentStatusChanges;
 
-CREATE TABLE StudentStatusChanges (
+CREATE TABLE Education.StudentStatusChanges (
     ChangeID INT IDENTITY(1,1) PRIMARY KEY,
     StudentID INT NOT NULL,			--fk
 	SemesterID INT NOT NULL,		--fk
@@ -12,8 +12,6 @@ CREATE TABLE StudentStatusChanges (
     ChangeDate DATE NOT NULL DEFAULT GETDATE(),
     Description NVARCHAR(255) NULL,     
 
-
-	CONSTRAINT FK_StudentStatusChanges_Students FOREIGN KEY (StudentID) REFERENCES Students(StudentID),
-	CONSTRAINT FK_StudentStatusChanges_Semesters FOREIGN KEY (SemesterID) REFERENCES Semesters(SemesterID)
-
+	CONSTRAINT FK_StudentStatusChanges_Students FOREIGN KEY (StudentID) REFERENCES Education.Students(StudentID),
+	CONSTRAINT FK_StudentStatusChanges_Semesters FOREIGN KEY (SemesterID) REFERENCES Education.Semesters(SemesterID)
 );

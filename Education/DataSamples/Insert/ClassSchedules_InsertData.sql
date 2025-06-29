@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO ClassSchedules (OfferingID, Day_Of_Week, StartTime, EndTime, Location_class)
+INSERT INTO Education.ClassSchedules (OfferingID, Day_Of_Week, StartTime, EndTime, Location_class)
 VALUES
 (1, 'Tuesday', '14:00:00', '15:30:00', 'Building A - Room 101'),
 (2, 'Saturday', '11:00:00', '12:30:00', 'Building E - Room 502'),

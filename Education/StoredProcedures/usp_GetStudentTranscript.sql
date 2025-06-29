@@ -1,6 +1,6 @@
 ﻿USE UniversityPortalDB;
 GO
-DROP PROCEDURE IF EXISTS usp_GetStudentTranscript;
+DROP PROCEDURE IF EXISTS Education.usp_GetStudentTranscript;
 GO
 
 CREATE PROCEDURE usp_GetStudentTranscript
@@ -15,13 +15,13 @@ BEGIN
         c.Credits,
         sc.Grade,
         sc.Status_course
-    FROM StudentCourses sc
+    FROM Education.StudentCourses sc
     JOIN Enrollments e ON sc.EnrollmentID = e.EnrollmentID
     JOIN CourseOfferings co ON e.OfferingID = co.OfferingID
     JOIN Courses c ON co.CourseID = c.CourseID
     WHERE e.StudentID = @StudentID AND co.SemesterID = @SemesterID;
 
-    INSERT INTO EventLogs (
+    INSERT INTO Education.EventLogs (
         EventType,
         TableName,
         RecordID,

@@ -1,6 +1,6 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM UserAccounts;
-DBCC CHECKIDENT ('UserAccounts', RESEED, 0);
+DELETE FROM Education.Advisors;
+DBCC CHECKIDENT ('Education.Advisors', RESEED, 0);
 

@@ -1,9 +1,9 @@
 USE UniversityPortalDB;
 GO
 
-DROP TABLE IF EXISTS Addresses;
+DROP TABLE IF EXISTS Education.Addresses;
 
-CREATE TABLE Addresses (
+CREATE TABLE Education.Addresses (
     AddressID INT PRIMARY KEY IDENTITY(1,1),
     EntityType NVARCHAR(30) NOT NULL, 
     EntityID NVARCHAR(10) UNIQUE NOT NULL,            
@@ -17,5 +17,3 @@ CREATE TABLE Addresses (
     ExtraDescription NVARCHAR(255)
 );
 
-DELETE FROM Addresses;
-DBCC CHECKIDENT ('Majors', RESEED, 0);

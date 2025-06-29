@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO Advisors (StudentID, InstructorID, AssignmentDate)
+INSERT INTO Education.Advisors (StudentID, InstructorID, AssignmentDate)
 VALUES
 (10001, 30001, '2023-10-01'),
 (10002, 30001, '2023-10-01'),

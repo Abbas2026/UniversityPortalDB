@@ -1,7 +1,7 @@
 ﻿USE UniversityPortalDB;
 GO
 
-INSERT INTO Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorID, DepartmentID) VALUES
+INSERT INTO Education.Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorID, DepartmentID) VALUES
 
 (N'Programming Basics', 'CE101', 3, N'Theory', N'Bachelor', 1, 1),
 (N'Data Structures', 'CE102', 4, N'Theory', N'Bachelor', 1, 1),
@@ -153,31 +153,31 @@ INSERT INTO Courses (CourseName, CourseCode, Credits, CourseType, Degree, MajorI
 (N'Production Planning', 'MGT104', 3, N'Theory', N'Bachelor', 25, 13),
 (N'Industrial Safety', 'MGT105', 2, N'Theory', N'Bachelor', 25, 13),
 
-/(N'Financial Management', 'MGT201', 3, N'Theory', N'Master', 26, 13),
+(N'Financial Management', 'MGT201', 3, N'Theory', N'Master', 26, 13),
 (N'Investment Analysis', 'MGT202', 3, N'Theory', N'Master', 26, 13),
 (N'Risk Management2', 'MGT203', 3, N'Theory', N'Master', 26, 13),
 (N'Corporate Finance', 'MGT204', 2, N'Theory', N'Master', 26, 13),
 (N'Portfolio Management', 'MGT205', 3, N'Theory', N'Master', 26, 13),
 
-/(N'Clinical Psychology', 'PSY101', 3, N'Theory', N'Bachelor', 27, 14),
+(N'Clinical Psychology', 'PSY101', 3, N'Theory', N'Bachelor', 27, 14),
 (N'Psychopathology', 'PSY102', 3, N'Theory', N'Bachelor', 27, 14),
 (N'Therapeutic Techniques', 'PSY103', 2, N'Practical', N'Bachelor', 27, 14),
 (N'Neuropsychology', 'PSY104', 3, N'Theory', N'Bachelor', 27, 14),
 (N'Child Psychology', 'PSY105', 3, N'Theory', N'Bachelor', 27, 14),
 
-/(N'Educational Psychology', 'PSY201', 3, N'Theory', N'Master', 28, 14),
+(N'Educational Psychology', 'PSY201', 3, N'Theory', N'Master', 28, 14),
 (N'Learning Theories', 'PSY202', 3, N'Theory', N'Master', 28, 14),
 (N'Developmental Psychology', 'PSY203', 3, N'Theory', N'Master', 28, 14),
 (N'Assessment Techniques', 'PSY204', 2, N'Practical', N'Master', 28, 14),
 (N'Counseling', 'PSY205', 3, N'Theory', N'Master', 28, 14),
 
-/(N'English Literature', 'ENG101', 4, N'Theory', N'Bachelor', 29, 15),
+(N'English Literature', 'ENG101', 4, N'Theory', N'Bachelor', 29, 15),
 (N'English Grammar', 'ENG102', 3, N'Theory', N'Bachelor', 29, 15),
 (N'Literary Criticism', 'ENG103', 3, N'Theory', N'Bachelor', 29, 15),
 (N'Creative Writing', 'ENG104', 2, N'Theory', N'Bachelor', 29, 15),
 (N'Translation Studies', 'ENG105', 3, N'Theory', N'Bachelor', 29, 15),
 
-/(N'Language Teaching Methods', 'ENG201', 3, N'Theory', N'Master', 30, 15),
+(N'Language Teaching Methods', 'ENG201', 3, N'Theory', N'Master', 30, 15),
 (N'Curriculum Design', 'ENG202', 3, N'Theory', N'Master', 30, 15),
 (N'Teaching Practicum', 'ENG203', 2, N'Practical', N'Master', 30, 15),
 (N'Assessment in Language Teaching', 'ENG204', 3, N'Theory', N'Master', 30, 15),

@@ -1,8 +1,8 @@
 USE UniversityPortalDB
 go
-DROP TABLE IF EXISTS Instructors;
+DROP TABLE IF EXISTS Education.Instructors;
 
-CREATE TABLE Instructors (
+CREATE TABLE Education.Instructors (
     InstructorID INT IDENTITY(30000,1) PRIMARY KEY,
     NationalCode NVARCHAR(10) UNIQUE NOT NULL,          
     FirstName NVARCHAR(50) NOT NULL,                
@@ -17,5 +17,5 @@ CREATE TABLE Instructors (
     Rank NVARCHAR(50),                            
     Status NVARCHAR(20) CHECK (Status IN ('Active', 'Retired', 'Resigned')),  
 
-	CONSTRAINT FK_Instructors_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+	CONSTRAINT FK_Instructors_Departments FOREIGN KEY (DepartmentID) REFERENCES Education.Departments(DepartmentID)
 );

@@ -1,8 +1,8 @@
 USE UniversityPortalDB
 go
-DROP TABLE IF EXISTS UserAccounts;
+DROP TABLE IF EXISTS Education.UserAccounts;
 
-CREATE TABLE UserAccounts (
+CREATE TABLE Education.UserAccounts (
     UserID NVARCHAR(10) PRIMARY KEY,     --fk
     Username NVARCHAR(50) NOT NULL UNIQUE,
     UserPassword NVARCHAR(255) NOT NULL, 
@@ -10,5 +10,5 @@ CREATE TABLE UserAccounts (
     IsActive BIT NOT NULL DEFAULT 1,
     CreatedAt DATETIME NOT NULL DEFAULT GETDATE(),
 
-	CONSTRAINT FK_UserAccounts_Userlink FOREIGN KEY (UserID) REFERENCES Userlink(EntityID)
+	CONSTRAINT FK_UserAccounts_Userlink FOREIGN KEY (UserID) REFERENCES Education.Userlink(EntityID)
 );

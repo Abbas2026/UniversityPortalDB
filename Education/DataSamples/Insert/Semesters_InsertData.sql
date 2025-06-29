@@ -1,6 +1,6 @@
 USE UniversityPortalDB
 go
-INSERT INTO Semesters (Termname, TermNumber, StartDate, EndDate)
+INSERT INTO Education.Semesters (Termname, TermNumber, StartDate, EndDate)
 VALUES
 (N'Fa 2022', 1, '2022-09-23', '2023-01-10'),
 (N'Sp 2023', 2, '2023-01-21', '2023-05-15'),

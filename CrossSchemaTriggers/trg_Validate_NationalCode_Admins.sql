@@ -1,7 +1,10 @@
 USE UniversityPortalDB;
 GO
+
+DROP TRIGGER IF EXISTS Education.trg_Validate_NationalCode_Admins;
+
 CREATE OR ALTER TRIGGER trg_Validate_NationalCode_Admins
-ON Admins
+ON Education.Admins
 INSTEAD OF INSERT
 AS
 BEGIN
@@ -9,7 +12,7 @@ BEGIN
 
     IF EXISTS (
         SELECT 1 FROM inserted
-        WHERE dbo.fn_IsValidNationalCode(NationalCode) = 0
+        WHERE Education.fn_IsValidNationalCode(NationalCode) = 0
     )
     BEGIN
         RAISERROR(N'The national code entered is invalid.', 16, 1);
@@ -17,7 +20,7 @@ BEGIN
         RETURN;
     END
 
-    INSERT INTO Admins (
+    INSERT INTO Education.Admins (
         NationalCode, Firstname, Lastname, Role_user, PhoneNumber, Email
     )
     SELECT

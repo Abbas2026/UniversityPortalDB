@@ -1,5 +1,5 @@
 USE UniversityPortalDB
 GO
 
-DELETE FROM Semesters;
-DBCC CHECKIDENT ('Semesters', RESEED, 0);
+DELETE FROM Education.Semesters;
+DBCC CHECKIDENT ('Education.Semesters', RESEED, 0);

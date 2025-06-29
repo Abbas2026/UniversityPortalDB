@@ -1,8 +1,8 @@
 USE UniversityPortalDB
 go
-DROP TABLE IF EXISTS Admins;
+DROP TABLE IF EXISTS Education.Admins;
 
-CREATE TABLE Admins (
+CREATE TABLE Education.Admins (
     AdminID INT IDENTITY(20000,1) PRIMARY KEY,
 	NationalCode NVARCHAR(10) UNIQUE NOT NULL,          
     Firstname NVARCHAR(50) NOT NULL,

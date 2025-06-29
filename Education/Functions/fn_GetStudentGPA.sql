@@ -1,8 +1,8 @@
 USE UniversityPortalDB;
 GO
-DROP FUNCTION IF EXISTS fn_GetStudentGPA;
+DROP FUNCTION IF EXISTS Education.fn_GetStudentGPA;
 
-CREATE FUNCTION dbo.fn_GetStudentGPA
+CREATE FUNCTION Education.fn_GetStudentGPA
 (
     @StudentID INT,
     @SemesterID INT
@@ -17,7 +17,7 @@ BEGIN
             WHEN SUM(c.Credits) = 0 THEN NULL
             ELSE CAST(SUM(sc.Grade * c.Credits) AS FLOAT) / SUM(c.Credits)
         END
-    FROM StudentCourses sc
+    FROM Education.StudentCourses sc
     JOIN Enrollments e ON sc.EnrollmentID = e.EnrollmentID
     JOIN CourseOfferings co ON e.OfferingID = co.OfferingID
     JOIN Courses c ON co.CourseID = c.CourseID

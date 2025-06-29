@@ -1,5 +1,5 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM Enrollments;
-DBCC CHECKIDENT ('Enrollments', RESEED, 0);
+DELETE FROM Education.Enrollments;
+DBCC CHECKIDENT ('Education.Enrollments', RESEED, 0);

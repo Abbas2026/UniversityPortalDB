@@ -1,8 +1,10 @@
 USE UniversityPortalDB;
 GO
 
+DROP TRIGGER IF EXISTS Education.trg_UpdateStudentCourseStatus;
+GO
 CREATE TRIGGER trg_UpdateStudentCourseStatus
-ON StudentCourses
+ON Education.StudentCourses
 AFTER UPDATE
 AS
 BEGIN
@@ -15,6 +17,6 @@ BEGIN
             WHEN i.Grade IS NOT NULL AND i.Grade < 10 THEN N'ãÑÏæÏ'
             ELSE sc.Status_course
         END
-    FROM StudentCourses sc
+    FROM Education.StudentCourses sc
     JOIN inserted i ON sc.StudentCoursID = i.StudentCoursID
 END

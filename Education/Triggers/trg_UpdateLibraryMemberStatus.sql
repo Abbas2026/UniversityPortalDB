@@ -1,8 +1,11 @@
 USE UniversityPortalDB;
 GO
 
+DROP TRIGGER IF EXISTS Education.trg_UpdateMemberIsActive;
+GO
+
 CREATE OR ALTER TRIGGER trg_UpdateMemberIsActive
-ON Students
+ON Education.Students
 AFTER UPDATE
 AS
 BEGIN

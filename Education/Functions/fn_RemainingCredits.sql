@@ -1,7 +1,9 @@
 USE UniversityPortalDB;
 GO
 
-CREATE FUNCTION dbo.fn_RemainingCredits
+DROP FUNCTION IF EXISTS Education.fn_RemainingCredits;
+
+CREATE FUNCTION Education.fn_RemainingCredits
 (
     @StudentID INT
 )
@@ -11,7 +13,7 @@ BEGIN
     DECLARE @CompletedCredits INT
 
     SELECT @CompletedCredits = ISNULL(SUM(c.Credits), 0)
-    FROM StudentCourses sc
+    FROM Education.StudentCourses sc
     JOIN Enrollments e ON sc.EnrollmentID = e.EnrollmentID
     JOIN CourseOfferings co ON e.OfferingID = co.OfferingID
     JOIN Courses c ON co.CourseID = c.CourseID

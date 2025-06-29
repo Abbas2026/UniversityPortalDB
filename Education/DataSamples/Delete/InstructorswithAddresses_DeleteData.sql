@@ -5,16 +5,16 @@ BEGIN TRY
     BEGIN TRANSACTION;
 
 
-    DELETE FROM Userlink
+    DELETE FROM Education.Userlink
     WHERE EntityType = N'Instructor' ;
 
 
     DELETE A
-    FROM Addresses A
-    INNER JOIN Instructors I ON A.EntityType = N'Instructor' AND A.EntityID = I.NationalCode;
+    FROM Education.Addresses A
+    INNER JOIN Education.Instructors I ON A.EntityType = N'Instructor' AND A.EntityID = I.NationalCode;
 
-    DELETE FROM Instructors
-	DBCC CHECKIDENT ('Instructors', RESEED, 30000);
+    DELETE FROM Education.Instructors
+	DBCC CHECKIDENT ('Education.Instructors', RESEED, 30000);
 
 
     COMMIT TRANSACTION;

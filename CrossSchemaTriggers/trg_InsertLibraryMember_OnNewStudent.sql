@@ -1,8 +1,10 @@
 USE UniversityPortalDB;
 GO
 
+DROP TRIGGER IF EXISTS Education.trg_InsertLibraryMember_OnNewStudent;
+
 CREATE TRIGGER trg_InsertLibraryMember_OnNewStudent
-ON Students
+ON Education.Students
 AFTER INSERT
 AS
 BEGIN

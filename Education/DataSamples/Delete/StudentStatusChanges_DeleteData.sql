@@ -1,5 +1,5 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM StudentStatusChanges;
-DBCC CHECKIDENT ('StudentStatusChanges', RESEED, 0);
+DELETE FROM Education.StudentStatusChanges;
+DBCC CHECKIDENT ('Education.StudentStatusChanges', RESEED, 0);

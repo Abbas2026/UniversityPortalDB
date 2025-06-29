@@ -1,10 +1,10 @@
 ﻿USE UniversityPortalDB;
 GO
-DROP TRIGGER IF EXISTS trg_UpdateUnits_OnEnrollment;
+DROP TRIGGER IF EXISTS Education.trg_UpdateUnits_OnEnrollment;
 GO
 
 CREATE TRIGGER trg_UpdateUnits_OnEnrollment
-ON Enrollments
+ON Education.Enrollments
 AFTER INSERT
 AS
 BEGIN
@@ -40,6 +40,6 @@ BEGIN
 
     UPDATE ssc
     SET ssc.units = ssc.units + ei.TotalCredits
-    FROM StudentStatusChanges ssc
+    FROM Education.StudentStatusChanges ssc
     JOIN @EnrollmentInfo ei ON ssc.StudentID = ei.StudentID AND ssc.SemesterID = ei.SemesterID;
 END;

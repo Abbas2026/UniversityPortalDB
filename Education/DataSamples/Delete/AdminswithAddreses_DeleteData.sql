@@ -5,14 +5,14 @@ BEGIN TRY
     BEGIN TRANSACTION;
 
 	DELETE A
-    FROM Addresses A
-    INNER JOIN Admins Ad ON A.EntityType = N'Admin' AND A.EntityID = Ad.NationalCode;
+    FROM Education.Addresses A
+    INNER JOIN Education.Admins Ad ON A.EntityType = N'Admin' AND A.EntityID = Ad.NationalCode;
 
-    DELETE FROM Userlink
+    DELETE FROM Education.Userlink
     WHERE EntityType = N'Admin';
 
-    DELETE FROM Admins;
-	DBCC CHECKIDENT ('Admins', RESEED, 20000);
+    DELETE FROM Education.Admins;
+	DBCC CHECKIDENT ('Education.Admins', RESEED, 20000);
 
 
     COMMIT TRANSACTION;

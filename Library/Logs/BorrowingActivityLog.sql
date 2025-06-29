@@ -1,10 +1,12 @@
 USE UniversityPortalDB
 
-DROP TABLE IF EXISTS Logs_Library
+DROP TABLE IF EXISTS Library.BorrowingActivityLog;
 
-CREATE TABLE Library.Logs_Library (
+CREATE TABLE Library.BorrowingActivityLog (
     LogID INT PRIMARY KEY IDENTITY(1,1),
-    EventType NVARCHAR(100),
-    Description NVARCHAR(300),
+    BorrowID INT,
+    MemberID INT,
+    CopyID INT,
+    ActivityType NVARCHAR(100),
     EventDate DATETIME DEFAULT GETDATE()
 );

@@ -1,10 +1,10 @@
 ﻿USE UniversityPortalDB;
 GO
-DROP TRIGGER IF EXISTS trg_CheckGPA_OnGradeUpdate;
+DROP TRIGGER IF EXISTS Education.trg_CheckGPA_OnGradeUpdate;
 GO
 
 CREATE TRIGGER trg_CheckGPA_OnGradeUpdate
-ON StudentCourses
+ON Education.StudentCourses
 AFTER UPDATE
 AS
 BEGIN
@@ -22,10 +22,10 @@ BEGIN
     UPDATE ssc
     SET 
         GPA = GPA_Calc.GPA,
-        StatusType = dbo.fn_GetSemesterStatus(GPA_Calc.GPA)
-    FROM StudentStatusChanges ssc
+        StatusType = Education.fn_GetSemesterStatus(GPA_Calc.GPA)
+    FROM Education.StudentStatusChanges ssc
     JOIN Affected a ON ssc.StudentID = a.StudentID AND ssc.SemesterID = a.SemesterID
     CROSS APPLY (
-        SELECT dbo.fn_GetStudentGPA(a.StudentID, a.SemesterID) AS GPA
+        SELECT Education.fn_GetStudentGPA(a.StudentID, a.SemesterID) AS GPA
     ) GPA_Calc;
 END;

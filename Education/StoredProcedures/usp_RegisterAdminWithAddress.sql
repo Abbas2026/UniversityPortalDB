@@ -1,6 +1,6 @@
 ﻿USE UniversityPortalDB;
 GO
-DROP PROCEDURE IF EXISTS usp_RegisterAdminWithAddress;
+DROP PROCEDURE IF EXISTS Education.usp_RegisterAdminWithAddress;
 GO
 
 CREATE PROCEDURE usp_RegisterAdminWithAddress
@@ -25,7 +25,7 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        INSERT INTO Admins (
+        INSERT INTO Education.Admins (
             NationalCode, Firstname, Lastname, Role_user, PhoneNumber, Email
         )
         VALUES (
@@ -34,7 +34,7 @@ BEGIN
 
         DECLARE @NewAdminID INT = SCOPE_IDENTITY();
 
-        INSERT INTO Addresses (
+        INSERT INTO Education.Addresses (
             EntityType, EntityID, Country, Province, City, Street, Alley,
             PlaqueNumber, PostalCode, ExtraDescription
         )
@@ -43,7 +43,7 @@ BEGIN
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
-        INSERT INTO EventLogs (
+        INSERT INTO Education.EventLogs (
             EventType,
             TableName,
             RecordID,

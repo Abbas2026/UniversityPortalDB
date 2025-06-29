@@ -1,8 +1,10 @@
 USE UniversityPortalDB;
 GO
 
+DROP TRIGGER IF EXISTS Education.trg_DeactivateLibraryMember_OnStatusChange;
+
 CREATE TRIGGER trg_DeactivateLibraryMember_OnStatusChange
-ON Students
+ON Education.Students
 AFTER UPDATE
 AS
 BEGIN

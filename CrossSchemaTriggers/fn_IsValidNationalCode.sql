@@ -1,7 +1,8 @@
 USE UniversityPortalDB;
 GO
+DROP FUNCTION IF EXISTS Education.fn_IsValidNationalCode;
 
-CREATE OR ALTER FUNCTION dbo.fn_IsValidNationalCode(@NationalCode CHAR(10))
+CREATE OR ALTER FUNCTION Education.fn_IsValidNationalCode(@NationalCode CHAR(10))
 RETURNS BIT
 AS
 BEGIN

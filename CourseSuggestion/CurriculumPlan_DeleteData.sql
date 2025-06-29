@@ -1,6 +1,6 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM CurriculumPlan;
+DELETE FROM Education.CurriculumPlan;
 
-DBCC CHECKIDENT ('CurriculumPlan', RESEED, 0);
+DBCC CHECKIDENT ('Education.CurriculumPlan', RESEED, 0);

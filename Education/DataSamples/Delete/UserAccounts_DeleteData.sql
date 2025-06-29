@@ -1,4 +1,4 @@
 USE UniversityPortalDB;
 GO
 
-DELETE FROM UserAccounts;
+DELETE FROM Education.UserAccounts;

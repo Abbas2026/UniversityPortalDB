@@ -12,20 +12,20 @@ BEGIN
 
     DECLARE @MajorID INT;
 
-    SELECT @MajorID = MajorID FROM Students WHERE StudentID = @StudentID;
+    SELECT @MajorID = MajorID FROM Education.Students WHERE StudentID = @StudentID;
 
     ;WITH PassedCourses AS (
         SELECT DISTINCT c.CourseID
-        FROM StudentCourses sc
-        JOIN Enrollments e ON sc.EnrollmentID = e.EnrollmentID
-        JOIN CourseOfferings co ON e.OfferingID = co.OfferingID
-        JOIN Courses c ON co.CourseID = c.CourseID
+        FROM Education.StudentCourses sc
+        JOIN Education.Enrollments e ON sc.EnrollmentID = e.EnrollmentID
+        JOIN Education.CourseOfferings co ON e.OfferingID = co.OfferingID
+        JOIN Education.Courses c ON co.CourseID = c.CourseID
         WHERE e.StudentID = @StudentID AND sc.Status_course = N'Å«” ‘œÂ'
     )
 
     SELECT cp.CourseID, c.CourseName, c.Credits, cp.SemesterOrder
-    FROM CurriculumPlan cp
-    JOIN Courses c ON cp.CourseID = c.CourseID
+    FROM Education.CurriculumPlan cp
+    JOIN Education.Courses c ON cp.CourseID = c.CourseID
     WHERE cp.MajorID = @MajorID
       AND cp.SemesterOrder <= @CurrentSemesterOrder
       AND cp.CourseID NOT IN (SELECT CourseID FROM PassedCourses)

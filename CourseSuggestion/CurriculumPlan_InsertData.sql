@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO CurriculumPlan (MajorID, CourseID, SemesterOrder)
+INSERT INTO Education.CurriculumPlan (MajorID, CourseID, SemesterOrder)
 VALUES
 (1, 151, 1),
 (1, 152, 1),

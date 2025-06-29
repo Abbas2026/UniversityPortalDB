@@ -1,6 +1,6 @@
 ﻿USE UniversityPortalDB
 GO
-DROP PROCEDURE IF EXISTS usp_RegisterStudentWithAddress;
+DROP PROCEDURE IF EXISTS Education.usp_RegisterStudentWithAddress;
 GO
 
 CREATE PROCEDURE usp_RegisterStudentWithAddress
@@ -32,7 +32,7 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        INSERT INTO Students (
+        INSERT INTO Education.Students (
             NationalCode, FirstName, LastName, FatherName, BirthDate, Gender,
             PhoneNumber, Email, EntryYear, DepartmentID, MajorID, Status_Education
         )
@@ -42,7 +42,7 @@ BEGIN
         );
 
 
-        INSERT INTO Addresses (
+        INSERT INTO Education.Addresses (
             EntityType, EntityID, Country, Province, City, Street, Alley,
             PlaqueNumber, PostalCode, ExtraDescription
         )
@@ -51,7 +51,7 @@ BEGIN
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
-        INSERT INTO EventLogs (
+        INSERT INTO Education.EventLogs (
             EventType,
             TableName,
             RecordID,

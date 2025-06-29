@@ -1,8 +1,11 @@
 USE UniversityPortalDB
 GO
 
+DROP TRIGGER IF EXISTS Education.trg_AfterInsert_Student;
+GO
+
 CREATE TRIGGER trg_AfterInsert_Student
-ON Students
+ON Education.Students
 AFTER INSERT
 AS
 BEGIN

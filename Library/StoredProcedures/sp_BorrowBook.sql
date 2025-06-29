@@ -1,7 +1,7 @@
 USE UniversityPortalDB
 GO
 
-CREATE PROCEDURE Library.sp_BorrowBook
+CREATE OR ALTER PROCEDURE Library.sp_BorrowBook
     @MemberID INT,
     @CopyID INT,
     @DueDate DATE

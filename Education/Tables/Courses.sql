@@ -1,8 +1,8 @@
 USE UniversityPortalDB
 go
-DROP TABLE IF EXISTS Courses;
+DROP TABLE IF EXISTS Education.Courses;
 
-CREATE TABLE Courses (
+CREATE TABLE Education.Courses (
     CourseID INT IDENTITY(1,1) PRIMARY KEY,         
     CourseName NVARCHAR(100) UNIQUE NOT NULL,                 
     CourseCode NVARCHAR(20) UNIQUE NOT NULL,            
@@ -12,6 +12,6 @@ CREATE TABLE Courses (
     MajorID INT NULL,						--fk
     DepartmentID INT NOT NULL,              --fk    
 	
-	CONSTRAINT FK_Courses_Major FOREIGN KEY (MajorID) REFERENCES Majors(MajorID),
-	CONSTRAINT FK_Courses_Departments FOREIGN KEY (DepartmentID) REFERENCES Departments(DepartmentID)
+	CONSTRAINT FK_Courses_Major FOREIGN KEY (MajorID) REFERENCES Education.Majors(MajorID),
+	CONSTRAINT FK_Courses_Departments FOREIGN KEY (DepartmentID) REFERENCES Education.Departments(DepartmentID)
 );

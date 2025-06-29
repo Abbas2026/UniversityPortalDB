@@ -1,6 +1,6 @@
 ﻿USE UniversityPortalDB
 go
 
-DELETE FROM Departments;
+DELETE FROM Education.Departments;
 
-DBCC CHECKIDENT ('Departments', RESEED, 0);
+DBCC CHECKIDENT ('Education.Departments', RESEED, 0);

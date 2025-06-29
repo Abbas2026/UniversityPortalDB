@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO CourseOfferings (CourseID, SemesterID, InstructorID, Capacity) VALUES
+INSERT INTO Education.CourseOfferings (CourseID, SemesterID, InstructorID, Capacity) VALUES
 
 (1, 1, 30001, 40), (1, 3, 30002, 35),
 (2, 1, 30003, 30), (2, 3, 30004, 40),

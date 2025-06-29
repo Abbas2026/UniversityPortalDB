@@ -1,7 +1,7 @@
 ﻿USE UniversityPortalDB;
 GO
 
-DROP PROCEDURE IF EXISTS usp_RegisterStudentInCourse;
+DROP PROCEDURE IF EXISTS Education.usp_RegisterStudentInCourse;
 GO
 
 CREATE PROCEDURE usp_RegisterStudentInCourse
@@ -14,12 +14,12 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        INSERT INTO Enrollments (StudentID, OfferingID)
+        INSERT INTO Education.Enrollments (StudentID, OfferingID)
         VALUES (@StudentID, @OfferingID);
 
         DECLARE @NewEnrollmentID INT = SCOPE_IDENTITY();
 
-        INSERT INTO EventLogs (
+        INSERT INTO Education.EventLogs (
             EventType,
             TableName,
             RecordID,

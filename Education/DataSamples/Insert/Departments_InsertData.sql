@@ -1,6 +1,6 @@
 ﻿USE UniversityPortalDB
 go
-INSERT INTO Departments (DepartmentName, HeadOfDepartment, OfficePhone, Email)
+INSERT INTO Education.Departments (DepartmentName, HeadOfDepartment, OfficePhone, Email)
 VALUES 
 (N'Computer Science', N'Dr. Ali Rezaei', '021-12345601', 'cs@university.edu'),
 (N'Electrical Engineering', N'Dr. Zahra Ahmadi', '021-12345602', 'ee@university.edu'),

@@ -1,7 +1,7 @@
-DELETE FROM UserAccounts;
+DELETE FROM Education.UserAccounts;
 
 
-INSERT INTO UserAccounts (UserID, Username, UserPassword, Role_user, IsActive, CreatedAt) 
+INSERT INTO Education.UserAccounts (UserID, Username, UserPassword, Role_user, IsActive, CreatedAt) 
 VALUES
 ('4931584551', 'user4931584551', '123456', 'Instructor', 1, '2025-05-28 20:27:12'),
 ('7905469611', 'user7905469611', '123456', 'Instructor', 1, '2025-05-28 20:27:12'),

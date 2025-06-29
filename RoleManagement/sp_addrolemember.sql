@@ -43,7 +43,7 @@ GO
 EXEC sp_addrolemember 'Student', 'studentUser';
 GO
 
-REVOKE EXECUTE ON dbo.fn_GetSemesterStatus FROM PUBLIC;
+REVOKE EXECUTE ON dbo.fn_GetSemesterStatus FROM PUBLIC;			   
 REVOKE EXECUTE ON dbo.fn_GetStudentGPA FROM PUBLIC;
 REVOKE EXECUTE ON dbo.fn_RemainingCredits FROM PUBLIC;
 GO
@@ -56,4 +56,31 @@ GO
 REVOKE SELECT, INSERT, UPDATE, DELETE ON dbo.Enrollments FROM Student;
 GO
 GRANT EXECUTE ON dbo.usp_RegisterStudentInCourse TO Student;
+GO
+
+
+USE master;
+GO
+CREATE LOGIN librarianUser WITH PASSWORD = 'LibrarianPass@123';
+GO
+
+USE UniversityPortalDB;
+GO
+
+IF NOT EXISTS (SELECT * FROM sys.database_principals WHERE name = 'Librarian')
+    CREATE ROLE Librarian;
+GO
+
+CREATE USER librarianUser FOR LOGIN librarianUser;
+GO
+
+EXEC sp_addrolemember 'Librarian', 'librarianUser';
+GO
+
+REVOKE EXECUTE ON Library.sp_BorrowBook FROM PUBLIC;
+REVOKE EXECUTE ON Library.sp_ReturnBook FROM PUBLIC;
+GO
+
+GRANT EXECUTE ON Library.sp_BorrowBook TO Librarian;
+GRANT EXECUTE ON Library.sp_ReturnBook TO Librarian;
 GO

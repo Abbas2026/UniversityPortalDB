@@ -1,7 +1,7 @@
 USE UniversityPortalDB
 GO
 
-INSERT INTO Majors (MajorName, MajorCode, Degree, DepartmentID)
+INSERT INTO Education.Majors (MajorName, MajorCode, Degree, DepartmentID)
 VALUES 
 (N'Computer Engineering', N'CE01', N'Bachelor', 1),
 (N'Software Engineering', N'CE02', N'Bachelor', 1),

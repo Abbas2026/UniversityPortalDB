@@ -1,6 +1,6 @@
 USE UniversityPortalDB;
 GO
-DROP PROCEDURE IF EXISTS usp_RegisterInstructorWithAddress;
+DROP PROCEDURE IF EXISTS Education.usp_RegisterInstructorWithAddress;
 GO
 
 CREATE PROCEDURE usp_RegisterInstructorWithAddress
@@ -32,7 +32,7 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        INSERT INTO Instructors (
+        INSERT INTO Education.Instructors (
             NationalCode, FirstName, LastName, FatherName, BirthDate, Gender,
             PhoneNumber, Email, HireDate, DepartmentID, Rank, Status
         )
@@ -42,7 +42,7 @@ BEGIN
         );
 
 
-        INSERT INTO Addresses (
+        INSERT INTO Education.Addresses (
             EntityType, EntityID, Country, Province, City, Street, Alley,
             PlaqueNumber, PostalCode, ExtraDescription
         )
@@ -51,7 +51,7 @@ BEGIN
             @PlaqueNumber, @PostalCode, @ExtraDescription
         );
 
-        INSERT INTO EventLogs (
+        INSERT INTO Education.EventLogs (
             EventType,
             TableName,
             RecordID,

@@ -1,7 +1,7 @@
 ﻿USE UniversityPortalDB;
 GO
 
-DROP PROCEDURE IF EXISTS usp_UpdateStudentGrade;
+DROP PROCEDURE IF EXISTS Education.usp_UpdateStudentGrade;
 GO
 
 CREATE PROCEDURE usp_UpdateStudentGrade
@@ -14,7 +14,7 @@ BEGIN
     BEGIN TRY
         BEGIN TRANSACTION;
 
-        UPDATE StudentCourses
+        UPDATE Education.StudentCourses
         SET Grade = @Grade,
             Status_course = CASE WHEN @Grade >= 10 THEN N'پاس شده' ELSE N'مردود' END
         WHERE StudentCoursID = @StudentCourseID;

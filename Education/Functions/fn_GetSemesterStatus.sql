@@ -1,7 +1,9 @@
 ﻿USE UniversityPortalDB;
 GO
 
-CREATE FUNCTION dbo.fn_GetSemesterStatus
+DROP FUNCTION IF EXISTS Education.fn_GetSemesterStatus;
+
+CREATE FUNCTION Education.fn_GetSemesterStatus
 (
     @GPA DECIMAL(4,2)
 )

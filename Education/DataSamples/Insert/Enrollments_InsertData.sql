@@ -1,7 +1,7 @@
 USE UniversityPortalDB;
 GO
 
-INSERT INTO Enrollments (StudentID, OfferingID, EnrollmentDate, Status_enrollment) VALUES
+INSERT INTO Education.Enrollments (StudentID, OfferingID, EnrollmentDate, Status_enrollment) VALUES
 (10028, 1, '2025-05-27 00:00:00', N'À» ù‰«„ù‘œÂ'),
 (10049, 2, '2025-05-09 00:00:00', N'À» ù‰«„ù‘œÂ'),
 (10017, 3, '2025-04-22 00:00:00', N'À» ù‰«„ù‘œÂ'),

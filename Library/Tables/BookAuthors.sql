@@ -7,3 +7,5 @@ CREATE TABLE Library.BookAuthors (
     AuthorID INT FOREIGN KEY REFERENCES Library.Authors(AuthorID),
     PRIMARY KEY (BookID, AuthorID)
 );
+
+
