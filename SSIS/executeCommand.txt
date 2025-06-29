@@ -1,0 +1,1 @@
+DTExec /F "D:\university\term4\data_base\Project\SSIS\bookRcommendationETL\Integration Services Project1\Package.dtsx" /SET "\Package.Parameters[MemberID].Value";101

@@ -6,9 +6,8 @@
     "\\Functions",
     "\\Logs",
     "\\StoredProcedures",
-    "\\Tables",
     "\\Triggers"
   ],
-  "SelectedNode": "\\Triggers\\trg_prevent_deactivate_active_member.sql",
+  "SelectedNode": "\\StoredProcedures\\RecommendBooksForStudent.sql",
   "PreviewInSolutionExplorer": false
 }
