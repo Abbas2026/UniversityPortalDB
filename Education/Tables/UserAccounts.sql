@@ -12,3 +12,5 @@ CREATE TABLE Education.UserAccounts (
 
 	CONSTRAINT FK_UserAccounts_Userlink FOREIGN KEY (UserID) REFERENCES Education.Userlink(EntityID)
 );
+ALTER TABLE Education.UserAccounts
+ADD Salt NVARCHAR(256);

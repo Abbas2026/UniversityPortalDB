@@ -5,62 +5,62 @@ select *
 from Education.instructors;
 
 select *
-from userlink;
+from Education.userlink;
 
 select *
-from addresses;
+from Education.addresses;
 
 select *
-from admins;
+from Education.admins;
 
 select *
-from Students;
+from Education.Students;
 
 select *
-from Majors;
+from Education.;
 
 select *
-from courses;
+from Education.courses;
 
 select *
-from useraccounts;
+from Education.useraccounts;
 
 select *
-from departments;
+from Education.departments;
 
 select *
-from semesters;
+from Education.semesters;
 
 select *
-from CourseOfferings;
+from Education.CourseOfferings;
 
 select *
-from ClassSchedules;
+from Education.ClassSchedules;
 
 
 select *
-from ExamSchedules;
+from Education.ExamSchedules;
 
 select *
-from Enrollments
+from Education.Enrollments
 where StudentID=10001;
 
 
 select *
-from StudentCourses
+from Education.StudentCourses
 where EnrollmentID=594;
 
 select *
-from EventLogs;
+from Education.EventLogs;
 
 
 select *
-from StudentStatusChanges
+from Education.StudentStatusChanges
 where StudentID=10001;
 
-SELECT dbo.fn_GetStudentGPA(10003, 1) AS GPA;
+SELECT Education.fn_GetStudentGPA(10003, 1) AS GPA;
 
-SELECT dbo.fn_RemainingCredits(10003) AS RemainingUnits;
+SELECT Education.fn_RemainingCredits(10003) AS RemainingUnits;
 
 
 
@@ -72,11 +72,11 @@ SELECT
     co.SemesterID,
     co.CourseID
 FROM 
-    StudentCourses sc
+    Education.StudentCourses sc
 JOIN 
-    Enrollments e ON sc.EnrollmentID = e.EnrollmentID
+    Education.Enrollments e ON sc.EnrollmentID = e.EnrollmentID
 JOIN 
-    CourseOfferings co ON e.OfferingID = co.OfferingID
+    Education.CourseOfferings co ON e.OfferingID = co.OfferingID
 WHERE 
     co.SemesterID = 1 AND e.StudentID =10003;
 
@@ -97,7 +97,7 @@ WHERE
     @SemesterID = 6;
 
 
-	EXEC usp_RegisterStudentWithAddress
+	EXEC Education.usp_RegisterStudentWithAddress
     @NationalCode = '1145431933',
     @FirstName = N'علی',
     @LastName = N'رضایی',
@@ -155,6 +155,8 @@ WHERE
     @City = N'شیراز',
     @Street = N'نمازی',
     @Alley = N'گلسار',
+
+
     @PlaqueNumber = '8',
     @PostalCode = '7654321098',
     @ExtraDescription = N'مدیریت کل سامانه دانشگاه';

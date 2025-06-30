@@ -3,7 +3,7 @@ GO
 DROP PROCEDURE IF EXISTS Education.usp_RegisterStudentWithAddress;
 GO
 
-CREATE PROCEDURE usp_RegisterStudentWithAddress
+CREATE PROCEDURE Education.usp_RegisterStudentWithAddress
     @NationalCode NVARCHAR(10),
     @FirstName NVARCHAR(50),
     @LastName NVARCHAR(50),

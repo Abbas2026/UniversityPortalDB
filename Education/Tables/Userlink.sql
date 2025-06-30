@@ -7,3 +7,5 @@ CREATE TABLE Education.Userlink (
     EntityType NVARCHAR(50) NOT NULL,
     EntityID NVARCHAR(10) UNIQUE NOT NULL,		--national code--
 );
+INSERT INTO Education.Userlink (EntityType, EntityID)
+VALUES (N'Admin', N'8247202328');
